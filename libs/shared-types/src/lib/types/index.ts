@@ -1,0 +1,20 @@
+export type UpdatableKeys =
+   | 'name'
+   | 'avatar'
+   | 'domain'
+   | 'description'
+   | 'employesIds'
+   | 'itemsIds'
+   | 'premium.type'
+   | 'premium.expiration'
+   | 'roleId'
+   | 'selledTimes'
+   | 'price'
+   | 'color'
+   | 'emoji'
+   | 'permissions.addItems'
+   | 'permissions.editItems'
+   | 'permissions.deleteItems'
+   | 'permissions.fetchItems'
+   | 'permissions.createOrders';
+export type ActionType = 'CREATE' | 'DELETE' | 'UPDATES';

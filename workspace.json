@@ -1,9 +1,9 @@
 {
-  "version": 2,
-  "projects": {
-    "client": "apps/client",
-    "client-e2e": "apps/client-e2e",
-    "shared-types": "libs/shared-types",
-    "web": "apps/web"
-  }
+   "version": 2,
+   "projects": {
+      "client": "apps/client",
+      "client-e2e": "apps/client-e2e",
+      "shared-types": "libs/shared-types",
+      "web": "apps/web"
+   }
 }

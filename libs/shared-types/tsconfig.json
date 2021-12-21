@@ -1,13 +1,25 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "files": [],
-  "include": [],
-  "references": [
-    {
-      "path": "./tsconfig.lib.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    }
-  ]
+   "extends": "../../tsconfig.base.json",
+   "files": [],
+   "include": [],
+   "references": [
+      {
+         "path": "./tsconfig.lib.json"
+      },
+      {
+         "path": "./tsconfig.spec.json"
+      }
+   ],
+   /*Can be removed if any probleme occurse*/
+   "compilerOptions": {
+      "allowUnreachableCode": false,
+      "allowUnusedLabels": false,
+      "declaration": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitReturns": true,
+      "pretty": true,
+      "sourceMap": true,
+      "strict": true
+   }
 }
