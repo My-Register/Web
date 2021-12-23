@@ -1,11 +1,41 @@
-@use './abstracts';
-@use './base';
+@use './abstracts' as *;
+@use './base' as *;
 
 * {
-   font-family: var(--font-family-monospace);
+   // font-family: var(--font-family-monospace);
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html,
 body {
-   height: 100%;
+   min-height: 100%;
+}
+
+.color-green {
+   color: clr(green) !important;
+}
+
+.color-red {
+   color: clr(red) !important;
+}
+
+.bold {
+   font-weight: $weight-black !important;
+}
+
+::-webkit-scrollbar {
+   width: 5px;
+}
+
+::-webkit-scrollbar-track {
+   background: clr(primary, 20);
+}
+
+::-webkit-scrollbar-thumb {
+   background: clr(main, 40);
+   border-radius: $default-border-radius;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: clr(main, 40);
 }

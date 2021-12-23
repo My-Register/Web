@@ -1,4 +1,5 @@
-import { Button1 } from '@components/index';
+import Link from 'next/link';
+import { Button1 } from '@components';
 import CompanyContext from '@libs/context/CompanyContext';
 import styles from '@styles/components/NavBar.module.scss';
 
@@ -19,13 +20,21 @@ function NavBar() {
                </div>
             </div>
             <ul>
-               <li>Home</li>
-               <li>Features</li>
-               <li>About</li>
+               <Link href="/" passHref>
+                  <li>Home</li>
+               </Link>
+               <Link href="/#features" passHref>
+                  <li>Features</li>
+               </Link>
+               <Link href="/about" passHref>
+                  <li>About</li>
+               </Link>
             </ul>
          </div>
          <div className={styles.right}>
-            <div>Pricing</div>
+            <Link href="/#pricing" passHref>
+               <div>Pricing</div>
+            </Link>
             <Button1 onClick={() => null}>Login</Button1>
          </div>
       </div>

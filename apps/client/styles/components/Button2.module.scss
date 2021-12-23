@@ -1,0 +1,32 @@
+@use '../abstracts' as a;
+
+.button {
+   gap: 1em;
+   display: flex;
+   cursor: pointer;
+   padding: 1em 3.5em;
+   align-items: center;
+   justify-self: center;
+   background-size: 200%;
+   transition: 0.25s ease-out;
+   background: a.clr($base: white);
+   border-radius: a.$default-border-radius;
+
+   &:hover {
+      background: a.clr($base: white, $shade: dark);
+      .icon {
+         transform: translateX(1rem);
+      }
+   }
+
+   div,
+   .icon {
+      @include a.defaultfont;
+      color: a.clr($base: dark);
+   }
+
+   .icon {
+      font-size: a.$size-large;
+      transition: 0.25s ease-out;
+   }
+}

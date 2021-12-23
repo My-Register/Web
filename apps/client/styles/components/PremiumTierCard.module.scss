@@ -1,0 +1,70 @@
+@use '../abstracts/' as a;
+
+.container {
+   width: 375px;
+   height: 450px;
+   border: 5px a.clr($base: main) solid;
+   border-radius: a.$default-border-radius;
+   box-shadow: 0 4px 4px rgba(a.clr($base: main), 0.75);
+   display: grid;
+   grid-template-rows: 0.75fr 2.5px 1fr 2.5px 0.5fr;
+   grid-template-areas:
+      'h'
+      'l2'
+      'c'
+      'l1'
+      'f';
+
+   hr {
+      justify-self: center;
+      width: 80%;
+      box-shadow: 0 2px 2px rgba(#707070, 0.5);
+      background-color: #707070;
+   }
+
+   .header {
+      gap: 1rem;
+      grid-area: h;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .title {
+         color: a.clr(dark);
+         font-size: a.$size-medium;
+         font-weight: a.$weight-semi-bold;
+      }
+
+      .description {
+         color: a.clr(grey);
+         font-size: a.$size-regular;
+         font-weight: a.$weight-semi-bold;
+         text-align: center;
+         width: 90%;
+      }
+   }
+
+   .content {
+      grid-area: c;
+      @include a.flexcenter($direction: column, $gap: 1rem);
+
+      .arg {
+         color: a.clr(dark);
+         font-size: a.$size-regular;
+         font-weight: a.$weight-regular;
+
+         .bold {
+            font-weight: a.$weight-bold;
+         }
+      }
+   }
+
+   .footer {
+      grid-area: f;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+}

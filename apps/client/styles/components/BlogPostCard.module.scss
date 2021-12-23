@@ -1,0 +1,48 @@
+@use '../abstracts' as a;
+
+.container {
+   width: 400px;
+   height: 400px;
+   background-color: a.clr($base: white);
+   display: grid;
+   grid-template-rows: 2fr 1fr;
+   grid-template-areas:
+      'i'
+      'c';
+   border-radius: a.$default-border-radius;
+   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+
+   .image {
+      grid-area: i;
+      background-color: a.clr($base: dark);
+      border-radius: a.$default-border-radius;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+   }
+
+   .infos {
+      grid-area: c;
+      padding: 1rem;
+      display: flex;
+      gap: 1rem;
+      justify-self: flex-start;
+      flex-direction: column;
+
+      .category {
+         color: a.clr($base: main);
+         font-size: a.$size-regular;
+         font-weight: a.$weight-semi-bold;
+      }
+
+      .title {
+         color: a.clr($base: dark);
+         font-size: a.$size-large;
+         font-weight: a.$weight-bold;
+      }
+
+      .author {
+         color: a.clr($base: grey);
+         font-size: a.$size-regular;
+         font-weight: a.$weight-semi-bold;
+      }
+   }
+}

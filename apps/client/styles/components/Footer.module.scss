@@ -1,0 +1,57 @@
+@use '../abstracts' as a;
+
+.container {
+   gap: 0.5rem;
+   height: 125px;
+   display: grid;
+   background-color: a.clr($base: main);
+   grid-template: 1.5fr 1fr / 1fr 2.5fr 1fr;
+   align-items: center;
+   justify-items: center;
+
+   .title {
+      grid-row: 1;
+      grid-column: 1;
+      color: a.clr($base: white);
+      font-size: a.$size-big;
+      font-weight: a.$weight-bold;
+   }
+
+   .items {
+      @include a.flexcenter($gap: 1rem);
+
+      .item {
+         color: a.clr($base: white);
+         font-size: a.$size-regular;
+         font-weight: a.$weight-semi-bold;
+         transition: 0.25s ease-out;
+         cursor: pointer;
+         &:hover {
+            color: a.clr($base: white, $shade: 60);
+         }
+      }
+   }
+
+   .socials {
+      @include a.flexcenter($gap: 1rem, $direction: row);
+
+      .social {
+         width: 50px;
+         height: 50px;
+         cursor: pointer;
+         border-radius: 50%;
+         @include a.flexcenter;
+         color: a.clr($base: dark);
+         font-size: a.$size-medium;
+         background-color: a.clr($base: white);
+      }
+   }
+
+   .copyrights {
+      grid-row: 2;
+      grid-column: 2;
+      font-size: a.$size-regular;
+      font-weight: a.$weight-semi-bold;
+      color: a.clr($base: white, $shade: 80);
+   }
+}

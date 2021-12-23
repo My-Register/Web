@@ -5,12 +5,12 @@ import { useState, useMemo, ReactNode } from 'react';
 
 function AlertWrapper({ children }: { children: ReactNode }) {
    const [alerts, setAlerts] = useState<AlertType[]>([
-      {
-         title: 'Alert',
-         type: 'warnning',
-         message: 'No Dismiss dsqdsq dsq dsqdqs dsq dsd sqddsq d dsqdsqdqs',
-         callback: () => console.log('Clicked Alert !!!'),
-      },
+      // {
+      //    title: 'Alert',
+      //    type: 'warnning',
+      //    message: 'No Dismiss dsqdsq dsq dsqdqs dsq dsd sqddsq d dsqdsqdqs',
+      //    callback: () => console.log('Clicked Alert !!!'),
+      // },
    ]);
 
    function pushAlerts(newAlerts: AlertType[] & { 0: AlertType }) {

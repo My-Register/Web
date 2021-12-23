@@ -1,0 +1,19 @@
+@use '../abstracts' as a;
+
+.container {
+   @include a.flexcenter($direction: column);
+
+   .display {
+      width: 100%;
+      background-color: a.clr(main);
+      height: calc(100vh - a.$navbar-height);
+      @include a.flexcenter($direction: column, $gap: 3rem);
+
+      &:nth-child(1) {
+         color: a.clr(white);
+         font-size: a.$size-big;
+         font-weight: a.$weight-black;
+         text-align: center;
+      }
+   }
+}
