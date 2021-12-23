@@ -1,0 +1,97 @@
+/*Main-Colors*/
+$blue: #66f;
+$dark: #1c2033;
+$gray: #6b6e79;
+$white: #fff;
+/*Additional Colors*/
+$red: #de524c;
+$green: #24a8af;
+/*Other Colors*/
+$yellow: #e7b549;
+$info: #55afe7;
+/*--*/
+$lighten: 5;
+$darken: 25;
+
+$colors: (
+   main: (
+      base: $blue,
+      light: lighten($blue, $lighten),
+      dark: darken($blue, $darken),
+      100: rgba($blue, 100%),
+      80: rgba($blue, 80%),
+      60: rgba($blue, 60%),
+      40: rgba($blue, 40%),
+      20: rgba($blue, 20%),
+   ),
+   dark: (
+      base: $dark,
+      light: lighten($dark, $lighten),
+      dark: darken($dark, $darken),
+      100: rgba($dark, 100%),
+      80: rgba($dark, 80%),
+      60: rgba($dark, 60%),
+      40: rgba($dark, 40%),
+      20: rgba($dark, 20%),
+   ),
+   grey: (
+      base: $grey,
+      light: lighten($grey, $lighten),
+      dark: darken($grey, $darken),
+      100: rgba($grey, 100%),
+      80: rgba($grey, 80%),
+      60: rgba($grey, 60%),
+      40: rgba($grey, 40%),
+      20: rgba($grey, 20%),
+   ),
+   white: (
+      base: $white,
+      light: lighten($white, $lighten),
+      dark: darken($white, $darken),
+      100: rgba($white, 100%),
+      80: rgba($white, 80%),
+      60: rgba($white, 60%),
+      40: rgba($white, 40%),
+      20: rgba($white, 20%),
+   ),
+   red: (
+      base: $red,
+      light: lighten($red, $lighten),
+      dark: darken($red, $darken),
+      100: rgba($red, 100%),
+      80: rgba($red, 80%),
+      60: rgba($red, 60%),
+      40: rgba($red, 40%),
+      20: rgba($red, 20%),
+   ),
+   green: (
+      base: $green,
+      light: lighten($green, $lighten),
+      dark: darken($green, $darken),
+      100: rgba($green, 100%),
+      80: rgba($green, 80%),
+      60: rgba($green, 60%),
+      40: rgba($green, 40%),
+      20: rgba($green, 20%),
+   ),
+   yellow: (
+      base: $yellow,
+      light: lighten($yellow, $lighten),
+      dark: darken($yellow, $darken),
+      100: rgba($yellow, 100%),
+      80: rgba($yellow, 80%),
+      60: rgba($yellow, 60%),
+      40: rgba($yellow, 40%),
+      20: rgba($yellow, 20%),
+   ),
+   info: (
+      base: $info,
+      light: lighten($info, $lighten),
+      dark: darken($info, $darken),
+      100: rgba($info, 100%),
+      80: rgba($info, 80%),
+      60: rgba($info, 60%),
+      40: rgba($info, 40%),
+      20: rgba($info, 20%),
+   ),
+);

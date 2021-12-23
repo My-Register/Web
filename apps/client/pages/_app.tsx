@@ -1,17 +1,15 @@
+import '@styles/global.scss';
+import Layout from '../layout';
 import { AppProps } from 'next/app';
-import Head from 'next/head';
-import './styles.css';
+import AuthWrapper from '../libs/context/AuthWrapper';
 
 function CustomApp({ Component, pageProps }: AppProps) {
    return (
-      <>
-         <Head>
-            <title>Welcome to client!</title>
-         </Head>
-         <main className="app">
+      <AuthWrapper>
+         <Layout>
             <Component {...pageProps} />
-         </main>
-      </>
+         </Layout>
+      </AuthWrapper>
    );
 }
 

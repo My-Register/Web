@@ -1,0 +1,6 @@
+@use './abstracts';
+@use './base';
+
+* {
+   font-family: var(--font-family-monospace);
+}
