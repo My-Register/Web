@@ -1,7 +1,16 @@
+@use './functions' as functions;
+@use './font' as f;
+
 @mixin flexcenter($direction: row, $gap: 0) {
    gap: $gap;
    display: flex;
    align-items: center;
    justify-content: center;
    flex-direction: $direction;
+}
+
+@mixin defaultfont($color: white) {
+   color: functions.clr($base: $color);
+   font-size: calc(f.$size-regular / 1.5);
+   font-weight: f.$weight-bold;
 }

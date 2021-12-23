@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import UserContext from '../../libs/context/UserContext';
+import UserContext from '../../libs/context/CompanyContext';
 
 function Dashboard() {
    const user = useContext(UserContext);

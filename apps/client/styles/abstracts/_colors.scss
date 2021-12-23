@@ -1,14 +1,14 @@
 /*Main-Colors*/
 $blue: #66f;
 $dark: #1c2033;
-$gray: #6b6e79;
+$grey: #6b6e79;
 $white: #fff;
+$primary: #55afe7;
 /*Additional Colors*/
-$red: #de524c;
+$red: #ec5353;
 $green: #24a8af;
 /*Other Colors*/
 $yellow: #e7b549;
-$info: #55afe7;
 /*--*/
 $lighten: 5;
 $darken: 25;
@@ -23,6 +23,16 @@ $colors: (
       60: rgba($blue, 60%),
       40: rgba($blue, 40%),
       20: rgba($blue, 20%),
+   ),
+   primary: (
+      base: $primary,
+      light: lighten($primary, $lighten),
+      dark: darken($primary, $darken),
+      100: rgba($primary, 100%),
+      80: rgba($primary, 80%),
+      60: rgba($primary, 60%),
+      40: rgba($primary, 40%),
+      20: rgba($primary, 20%),
    ),
    dark: (
       base: $dark,
@@ -83,15 +93,5 @@ $colors: (
       60: rgba($yellow, 60%),
       40: rgba($yellow, 40%),
       20: rgba($yellow, 20%),
-   ),
-   info: (
-      base: $info,
-      light: lighten($info, $lighten),
-      dark: darken($info, $darken),
-      100: rgba($info, 100%),
-      80: rgba($info, 80%),
-      60: rgba($info, 60%),
-      40: rgba($info, 40%),
-      20: rgba($info, 20%),
    ),
 );

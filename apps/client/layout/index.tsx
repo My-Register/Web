@@ -1,10 +1,10 @@
 import Head from './Head';
 import Footer from './Footer';
 import NavBar from './NavBar';
-import { ReactChildren } from 'react';
+import { ReactNode } from 'react';
 import { NextComponentType } from 'next';
 
-function Layout({ children }: { children: any }) {
+function Layout({ children }: { children: React.ReactNode }) {
    return (
       <>
          <NavBar />

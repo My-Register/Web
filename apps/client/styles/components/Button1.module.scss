@@ -1,0 +1,18 @@
+@use '../abstracts' as a;
+
+.button {
+   border-radius: a.$default-border-radius;
+   padding: 0.615em 3.5em;
+   cursor: pointer;
+   background: linear-gradient(to left, a.clr($base: main) 50%, a.clr($base: primary) 50%) right;
+   background-size: 200%;
+   transition: 0.5s ease-out;
+
+   &:hover {
+      background-position: left;
+   }
+
+   div {
+      @include a.defaultfont;
+   }
+}

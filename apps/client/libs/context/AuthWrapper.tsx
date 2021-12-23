@@ -1,26 +1,29 @@
 // import { Auth } from "../api";
-import UserContext from './UserContext';
-// import { UserInterface } from "../interfaces";
-import { useEffect, useState, useMemo } from 'react';
+import React from 'react';
+import CompanyContext from './CompanyContext';
+import { useEffect, useState, useMemo, ReactNode } from 'react';
+import type { CompanyInterface } from '@./shared-types';
 
-function AuthWrapper({ children }: { children: any }) {
+function AuthWrapper({ children }: { children: ReactNode }) {
    const [loading, setLoading] = useState<boolean>(true);
-   const [user, setUser] = useState<{ email: string } | null>(null);
-   const providerUser = useMemo(() => ({ user, setUser }), [user, setUser]);
-
+   const [company, setCompany] = useState<CompanyInterface | null>(null);
+   const provider: {
+      company: CompanyInterface;
+      setCompany: React.Dispatch<React.SetStateAction<CompanyInterface>>;
+   } = useMemo(() => ({ company, setCompany }), [company, setCompany]);
    useEffect(() => {
       /*
       Auth.IsLogedIn().then(({ data: user }) => {
-         setUser(user ? user : null);
+         setCompany(user ? user : null);
          setLoading(false);
       });
       */
 
-      setUser({ email: 'test' });
+      setCompany(null);
       setLoading(false);
    }, []);
 
-   return !loading && <UserContext.Provider value={providerUser}>{children}</UserContext.Provider>;
+   return !loading && <CompanyContext.Provider value={provider}>{children}</CompanyContext.Provider>;
 }
 
 export default AuthWrapper;

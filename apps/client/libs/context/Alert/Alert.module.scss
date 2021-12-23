@@ -1,0 +1,71 @@
+@use '../../../styles/abstracts' as a;
+
+$border-radius: a.$default-border-radius;
+$backdrop-color: rgba(0, 0, 0, 0.75);
+
+.backdrop {
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   @include a.flexcenter;
+   background-color: $backdrop-color;
+}
+
+.container {
+   width: 75vw;
+   height: 400px;
+   max-width: 500px;
+   border-radius: $border-radius;
+   background-color: a.clr($base: white);
+   display: grid;
+   grid-template-rows: 1fr 2fr;
+   grid-template-areas:
+      'h'
+      'c'
+      'c';
+
+   .header {
+      border-radius: $border-radius $border-radius 0 0;
+      background-color: a.clr($base: red);
+      grid-area: h;
+      @include a.flexcenter;
+   }
+
+   .content {
+      grid-area: c;
+      @include a.flexcenter($direction: column);
+      justify-content: space-around;
+      width: 100%;
+
+      .title {
+         color: a.clr($base: dark);
+         font-size: a.$size-regular;
+         font-weight: a.$weight-semi-bold;
+      }
+
+      .description {
+         color: a.clr($base: grey);
+         font-size: a.$size-small-more;
+         font-weight: a.$weight-regular;
+         text-align: center;
+         width: 85%;
+      }
+
+      .button {
+         border-radius: a.$default-border-radius;
+         padding: 0.615em 3.5em;
+         cursor: pointer;
+         background: linear-gradient(to left, a.clr($base: red) 50%, a.clr($base: red, $shade: light) 50%) right;
+         background-size: 200%;
+         transition: 0.5s ease-out;
+
+         &:hover {
+            background-position: left;
+         }
+
+         div {
+            @include a.defaultfont;
+         }
+      }
+   }
+}
