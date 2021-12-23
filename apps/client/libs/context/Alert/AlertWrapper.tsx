@@ -6,16 +6,10 @@ import { useState, useMemo, ReactNode } from 'react';
 function AlertWrapper({ children }: { children: ReactNode }) {
    const [alerts, setAlerts] = useState<AlertType[]>([
       {
-         type: 'warnning',
-         title: 'Alert !!!',
-         message: 'Dismiss 5000 Alert',
-         callback: () => console.log('Clicked 1 !!!'),
-      },
-      {
          title: 'Alert',
          type: 'warnning',
          message: 'No Dismiss dsqdsq dsq dsqdqs dsq dsd sqddsq d dsqdsqdqs',
-         callback: () => console.log('Clicked 2 !!!'),
+         callback: () => console.log('Clicked Alert !!!'),
       },
    ]);
 

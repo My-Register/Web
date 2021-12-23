@@ -9,8 +9,8 @@
    flex-direction: $direction;
 }
 
-@mixin defaultfont($color: white) {
+@mixin defaultfont($size: normal, $color: white) {
    color: functions.clr($base: $color);
-   font-size: calc(f.$size-regular / 1.5);
+   font-size: calc(f.$size-regular);
    font-weight: f.$weight-bold;
 }

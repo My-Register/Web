@@ -1,28 +1,97 @@
+@use '../abstracts' as a;
+
 .container {
    width: 100%;
    height: 75px;
-   background-color: var(--white);
    display: flex;
-   justify-content: space-between;
+   padding: 0 2rem;
    align-items: center;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-   padding: 1rem;
+   justify-content: space-between;
+   background-color: a.clr($base: white);
+   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.16);
 
    .left {
-      display: flex;
-      align-items: center;
+      @include a.flexcenter($gap: 2rem);
 
       .logo {
-         width: 50px;
-         border-radius: 0.25rem;
+         @include a.flexcenter($gap: 1rem);
+
+         .sandwich {
+            display: none;
+         }
+
+         .icon {
+            width: 50px;
+            height: 50px;
+            background-color: a.clr($base: dark);
+            border-radius: a.$default-border-radius;
+         }
+
+         .text {
+            @include a.flexcenter($direction: column);
+            align-items: flex-start;
+
+            .title {
+               color: a.clr($base: dark);
+               font-weight: a.$weight-bold;
+               font-size: a.$size-medium;
+            }
+            .desc {
+               color: a.clr($base: grey);
+               font-weight: a.$weight-semi-bold;
+               font-size: a.$size-small;
+               font-style: italic;
+            }
+         }
       }
 
       ul {
+         list-style-type: none;
+         @include a.flexcenter($gap: 1.5rem);
+
+         li {
+            color: a.clr($base: dark);
+            font-weight: a.$weight-semi-bold;
+            font-size: a.$size-regular;
+            cursor: pointer;
+            transition: 0.25s ease-out;
+
+            &:hover {
+               color: a.clr($base: main, $shade: dark);
+            }
+         }
       }
    }
 
    .right {
-      display: flex;
-      align-items: center;
+      @include a.flexcenter($gap: 2rem);
+
+      & > div {
+         color: a.clr($base: dark);
+         font-weight: a.$weight-semi-bold;
+         font-size: a.$size-regular;
+         cursor: pointer;
+         transition: 0.25s ease-out;
+
+         &:hover {
+            color: a.clr($base: main, $shade: dark);
+         }
+      }
+   }
+
+   @media (max-width: a.$breakpoint-sd) {
+      .left {
+         ul {
+            display: none;
+         }
+      }
+   }
+
+   @media (max-width: a.$breakpoint-sm) {
+      justify-content: center;
+
+      .right {
+         display: none;
+      }
    }
 }

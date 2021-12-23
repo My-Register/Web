@@ -14,7 +14,7 @@ $backdrop-color: rgba(0, 0, 0, 0.75);
 .container {
    width: 75vw;
    height: 400px;
-   max-width: 500px;
+   max-width: 450px;
    border-radius: $border-radius;
    background-color: a.clr($base: white);
    display: grid;
@@ -39,13 +39,13 @@ $backdrop-color: rgba(0, 0, 0, 0.75);
 
       .title {
          color: a.clr($base: dark);
-         font-size: a.$size-regular;
+         font-size: a.$size-big;
          font-weight: a.$weight-semi-bold;
       }
 
       .description {
          color: a.clr($base: grey);
-         font-size: a.$size-small-more;
+         font-size: a.$size-medium;
          font-weight: a.$weight-regular;
          text-align: center;
          width: 85%;
@@ -64,7 +64,9 @@ $backdrop-color: rgba(0, 0, 0, 0.75);
          }
 
          div {
-            @include a.defaultfont;
+            color: a.clr($base: white);
+            font-size: a.$size-regular;
+            font-weight: a.$weight-bold;
          }
       }
    }
