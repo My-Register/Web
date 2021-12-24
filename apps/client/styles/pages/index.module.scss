@@ -6,7 +6,7 @@
    .display {
       width: 100%;
       background-color: a.clr(main);
-      height: calc(100vh - a.$navbar-height);
+      height: calc(calc(100vh - a.$navbar-height) / 1.5);
       @include a.flexcenter($direction: column, $gap: 3rem);
 
       &:nth-child(1) {
@@ -14,6 +14,76 @@
          font-size: a.$size-big;
          font-weight: a.$weight-black;
          text-align: center;
+      }
+   }
+
+   .args {
+      margin: 5rem 0;
+      @include a.flexcenter($direction: column, $gap: 3rem);
+
+      .title {
+         color: a.clr($base: main);
+         font-weight: a.$weight-bold;
+      }
+
+      .cards {
+         @include a.flexcenter($gap: 3rem);
+         flex-wrap: wrap;
+      }
+   }
+
+   .more {
+      margin: 1rem 0;
+      gap: 1rem;
+      width: 100%;
+      display: flex;
+      padding: 3rem;
+      flex-direction: column;
+      justify-items: space-between;
+      background-color: a.clr($base: main);
+      border-radius: a.$default-border-radius;
+
+      .text {
+         color: a.clr(white);
+         font-size: a.$size-big;
+         font-weight: a.$weight-black;
+      }
+   }
+
+   .pricing {
+      width: 100%;
+      margin: 5rem 0;
+      text-align: center;
+      @include a.flexcenter($direction: column, $gap: 3rem);
+
+      .title {
+         color: a.clr($base: main);
+         font-weight: a.$weight-bold;
+      }
+
+      .cards {
+         @include a.flexcenter($gap: 3rem);
+         flex-wrap: wrap;
+      }
+   }
+
+   .blogposts {
+      width: 100%;
+      margin: 5rem 0;
+      text-align: center;
+      background-color: a.clr($base: main, $shade: 40);
+      @include a.flexcenter($direction: column, $gap: 3rem);
+      padding: 1rem;
+
+      .title {
+         color: a.clr($base: white);
+         font-weight: a.$weight-bold;
+      }
+
+      .cards {
+         @include a.flexcenter($gap: 3rem);
+         justify-items: flex-start;
+         flex-wrap: wrap;
       }
    }
 }

@@ -10,7 +10,7 @@ function Layout({ children }: { children: React.ReactNode }) {
          <NavBar />
          <Head />
          <main className="app">{children}</main>
-         <Footer />
+         {/* <Footer /> */}
       </>
    );
 }
